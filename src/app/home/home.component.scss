@@ -1,0 +1,17 @@
+::ng-deep {
+  .home {
+    .block-story {
+      padding-left: 400px !important;
+      padding-top: 30px;
+      .story {
+        padding-left: 40px;
+      }
+    }
+    .block-page {
+      padding-left: 400px !important;
+      .post {
+        padding-bottom: 40px;
+      }
+    }
+  }
+}

@@ -1,1 +1,20 @@
-<h1>this Home</h1>
+<div
+  class="home"
+  fxLayout="column"
+  fxLayoutAlign="space-between"
+  fxLayoutGap="40px"
+>
+  <div class="block-story" fxLayout="row">
+    <div class="story" *ngFor="let story of stories">
+      {{ story.name }}
+    </div>
+  </div>
+  <div class="block-page">
+    <div class="post" *ngFor="let post of posts">
+      <h4>
+        {{ post.name }}
+      </h4>
+      {{ post.image }}
+    </div>
+  </div>
+</div>

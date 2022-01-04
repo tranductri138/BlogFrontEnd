@@ -13,7 +13,6 @@ export class LoginComponent implements OnInit {
 
   matcher = new MyErrorStateMatcher();
 
-  onHome: boolean = false;
   constructor(
     private router: Router
   ) { }
@@ -23,7 +22,6 @@ export class LoginComponent implements OnInit {
 
   goToPage(name: string): void {
     this.router.navigate([`${name}`]);
-    this.onHome = true;
   }
 }
 
