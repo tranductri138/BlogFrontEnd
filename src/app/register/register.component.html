@@ -1,1 +1,22 @@
-<h1>This is register</h1>
+<h1>
+    Day la Register nehs
+</h1>
+<div class="register-container">
+    <div fxLayout = "column" fxLayoutGap = "30px">
+        <div>
+            <button (click) = "hashFunction('1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed')">
+                HashFunction
+            </button>
+        </div>
+            <div fxLayout = "column" >
+                <mat-label>Id UUid</mat-label>
+                <mat-form-field class="example-full-width" appearance="fill">
+                <input matInput #txtVal [(ngModel)]="value"  (keydown.enter)="applyFilter(txtVal.value)">
+                 </mat-form-field>
+            </div>
+            <div>
+                <h3>Day la obj :</h3>
+                <h1>{{answer | json }}</h1>
+            </div>
+        </div>
+</div>

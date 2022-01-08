@@ -3,8 +3,12 @@
   background-color: #f2c2cf;
   height: 70px;
   padding-right: 40px;
+  position: fixed;
   h2 {
     color: white !important;
     padding-left: 100px;
   }
+}
+#router {
+  padding-top: 80px;
 }

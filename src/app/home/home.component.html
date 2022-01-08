@@ -3,18 +3,28 @@
   fxLayout="column"
   fxLayoutAlign="space-between"
   fxLayoutGap="40px"
->
+> 
+  <div fxLayout="row" fxLayoutAlign="center">
+    <button (click)="reset()" mat-raised-button color="accent">Reset</button>
+  </div>
   <div class="block-story" fxLayout="row">
     <div class="story" *ngFor="let story of stories">
-      {{ story.name }}
+      <button mat-raised-button color="accent" (click)="fillterByMe(story)">{{ story.name }}</button>
     </div>
   </div>
   <div class="block-page">
-    <div class="post" *ngFor="let post of posts">
+    <div class="post" *ngFor="let post of post2">
       <h4>
         {{ post.name }}
       </h4>
       {{ post.image }}
     </div>
+  </div>
+ 
+</div>
+
+<div fxLayout ="row" fxLayoutGap="5px" fxLayoutAlign = "center">
+  <div *ngFor = "let num of numberArray"> 
+   {{num}} ,
   </div>
 </div>

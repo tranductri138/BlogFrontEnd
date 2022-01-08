@@ -1,0 +1,11 @@
+.example-form {
+    width: 300px;
+}
+::ng-deep {
+    .register-container{
+        padding-left: 200px;
+        .mat-form-field-wrapper{
+            width: 700px;
+        }
+    }
+}
