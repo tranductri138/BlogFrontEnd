@@ -20,76 +20,78 @@ export class HomeComponent implements OnInit {
       image: "day la anh cua tao"
     },
   ];
-  post2: Post[] = []; 
+  post2: Post[] = [];
   stories: Story[] = [
     { name: "BubbleSort" },
     { name: "InsertionSort" },
     { name: "MergeSort" },
     { name: "TimSort" },
   ]
-  constructor() {};
+  constructor() { };
   createObj() {
-    let obj:Post = {
+    let obj: Post = {
       name: "tao la tri dep zai",
       image: "day la anh cua tao"
     }
-    for(let i = 0 ; i <40 ; i++) {
+    for (let i = 0; i < 40; i++) {
       this.post2.push(obj)
-    } 
-  }
-  numberArray :number[] =  [7,21,47,85,1,4,35,10,3,2,6,14,8,5,16 ,0]
-  
-  ngOnInit(): void {
-    // this.createObj()
-  }
-  ar1() {
-     const numberArray1 :number[] = [7,21,47,85,1,4,35,10,3,2,6,14,8,5,16 ,0]
-     return numberArray1;
-  }
-  reset(){
-    this.numberArray = this.ar1() 
-  }
-  fillterByMe(sort:Story) {
-    const nameSort:string = sort.name
-    switch (nameSort) {
-      case "BubbleSort" :
-      this.bubbleSort(this.numberArray);
-      break;
-      case "InsertionSort" :
-      this.insertionSort(this.numberArray);
-      break;
-      case "MergeSort" :
-      this.mergeSort(this.posts);
-      break;
     }
   }
-  bubbleSort(a :number[]){
+  numberArray: number[] = [7, 21, 47, 85, 1, 4, 35, 10, 3, 2, 6, 14, 8, 5, 16, 0]
+
+  ngOnInit(): void {
+    // this.createObj()
+    let a = Tri.name
+    console.log(a);
+  }
+  ar1() {
+    const numberArray1: number[] = [7, 21, 47, 85, 1, 4, 35, 10, 3, 2, 6, 14, 8, 5, 16, 0]
+    return numberArray1;
+  }
+  reset() {
+    this.numberArray = this.ar1()
+  }
+  fillterByMe(sort: Story) {
+    const nameSort: string = sort.name
+    switch (nameSort) {
+      case "BubbleSort":
+        this.bubbleSort(this.numberArray);
+        break;
+      case "InsertionSort":
+        this.insertionSort(this.numberArray);
+        break;
+      case "MergeSort":
+        this.mergeSort(this.posts);
+        break;
+    }
+  }
+  bubbleSort(a: number[]) {
     const size = a.length;
-    for(let i = 0 ; i <size -1; i++) {
-      let swaped:boolean = false;
-      for( let j = 0 ; j < size - i -1 ; j++){
-          if(a[j] > a[j+1]) {
-            [a[j], a[j+1]] =[a[j+1],a[j]];
-            swaped = true
-          }
+    for (let i = 0; i < size - 1; i++) {
+      let swaped: boolean = false;
+      for (let j = 0; j < size - i - 1; j++) {
+        if (a[j] > a[j + 1]) {
+          [a[j], a[j + 1]] = [a[j + 1], a[j]];
+          swaped = true
+        }
       }
-      if(!swaped) break
+      if (!swaped) break
     }
     this.numberArray = a;
   }
-  insertionSort(a :number[]){
+  insertionSort(a: number[]) {
     const size = a.length;
-    for(let i = 1 ; i <size  ;i++) {
+    for (let i = 1; i < size; i++) {
       let ai = a[i];
-      let j  = i-1;
+      let j = i - 1;
       while (j >= 0 && a[j] > ai) {
-        a[j+1] = a[j];
+        a[j + 1] = a[j];
         j--;
       }
-      a[j+1] = ai;
+      a[j + 1] = ai;
     }
   }
-  mergeSort(posts :Post[]) {
+  mergeSort(posts: Post[]) {
 
   }
 
@@ -100,4 +102,7 @@ export interface Post {
 }
 export interface Story {
   name: string;
+}
+export enum Tri {
+  name = "trisdepzai"
 }

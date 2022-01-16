@@ -8,40 +8,40 @@ import { IHash } from './hashMap';
 })
 export class RegisterComponent implements OnInit {
   constructor() { }
-  value :string = "";
-  answer :any;
+  value: string = "";
+  answer: any;
   ngOnInit(): void {
-    this.hashAll() ;
+    this.hashAll();
   }
-  myHash:IHash = {}
+  myHash: IHash = {}
   database = [
     {
-      id : "abc" ,
-      name : "tris dep zai"
+      id: "abc",
+      name: "tris dep zai"
     },
     {
-      id : "abd" ,
-      name : "tris dep zai"
+      id: "abd",
+      name: "tris dep zai"
     },
     {
-      id : "ab1" ,
-      name : "tris dep zai"
+      id: "ab1",
+      name: "tris dep zai"
     },
     {
-      id : "abs" ,
-      name : "tris dep zai"
+      id: "abs",
+      name: "tris dep zai"
     },
     {
-      id : "abb" ,
-      name : "tris dep zai"
+      id: "abb",
+      name: "tris dep zai"
     },
     {
-      id : "ab5" ,
-      name : "tris dep zai"
+      id: "ab5",
+      name: "tris dep zai"
     },
     {
-      id : "ab6" ,
-      name : "tris dep zai"
+      id: "ab6",
+      name: "tris dep zai"
     },
   ]
   hashAll() {
@@ -60,22 +60,21 @@ export class RegisterComponent implements OnInit {
     // this.myHash["ab6"] = 7;
   }
 
-  applyFilter(id:string) :void {
+  applyFilter(id: string): void {
     this.answer = this.database[this.myHash[id]];
-    if(this.answer == undefined) {
+    if (this.answer == undefined) {
       this.answer = "Ban da sai roi ko co trong Database";
     }
   }
-  hashFunction (id : string) {
-    this.myHash[id] = 0 ;
+  hashFunction(id: string) {
+    this.myHash[id] = 0;
     this.in();
   }
-  in(){
-    // console.log(this.myHash["1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed"]);
+  in() {
 
-    console.log("day la vi tri 0",this.myHash["abc"]+ "---" , this.database[this.myHash["abc"]]);
-    console.log("day la vi tri 2",this.myHash["ab1"]+ "---" , this.database[this.myHash["ab1"]]);
-    console.log("day la vi tri 4",this.myHash["abb"]+ "---" , this.database[this.myHash["abb"]]);
-    console.log("day la vi tri 6",this.myHash["ab6"]+ "---" , this.database[this.myHash["ab6"]]);
+    console.log("day la vi tri 0", this.myHash["abc"] + "---", this.database[this.myHash["abc"]]);
+    console.log("day la vi tri 2", this.myHash["ab1"] + "---", this.database[this.myHash["ab1"]]);
+    console.log("day la vi tri 4", this.myHash["abb"] + "---", this.database[this.myHash["abb"]]);
+    console.log("day la vi tri 6", this.myHash["ab6"] + "---", this.database[this.myHash["ab6"]]);
   }
 }
