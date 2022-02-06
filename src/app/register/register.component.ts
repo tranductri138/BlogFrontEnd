@@ -12,6 +12,7 @@ export class RegisterComponent implements OnInit {
   answer: any;
   ngOnInit(): void {
     this.hashAll();
+    this.test();
   }
   myHash: IHash = {}
   database = [
@@ -76,5 +77,18 @@ export class RegisterComponent implements OnInit {
     console.log("day la vi tri 2", this.myHash["ab1"] + "---", this.database[this.myHash["ab1"]]);
     console.log("day la vi tri 4", this.myHash["abb"] + "---", this.database[this.myHash["abb"]]);
     console.log("day la vi tri 6", this.myHash["ab6"] + "---", this.database[this.myHash["ab6"]]);
+  }
+
+  test() {
+    const a = [1,2,3,5]
+    const b = [0,1,4,2,3]
+    b.forEach(x=>{
+      a.forEach(x => {
+        if(x==2) {
+          console.log(x);
+          return;
+        }
+      })
+    })
   }
 }

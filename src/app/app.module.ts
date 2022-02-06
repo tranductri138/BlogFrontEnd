@@ -13,8 +13,9 @@ import { RegisterComponent } from './register/register.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ButtonProfileComponent } from './button-profile/button-profile.component';
 import { CommonModule } from '@angular/common';
-import { Table1Component } from './table1/table1.component';
-import { Table2Component } from './table2/table2.component';
+import { Table1Component } from './home/table1/table1.component';
+import { Table2Component } from './home/table2/table2.component';
+import { LuyencssComponent } from './home/luyencss/luyencss.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { Table2Component } from './table2/table2.component';
     ButtonProfileComponent,
     Table1Component,
     Table2Component,
+    LuyencssComponent,
   ],
   imports: [
     BrowserModule,

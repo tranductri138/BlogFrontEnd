@@ -1,0 +1,16 @@
+.container {
+    display: flex;
+    justify-content: flex-start;
+    width: 80vw;
+    margin-left: 350px;
+    h2 {
+        margin: 0;
+    }
+    .form{
+        input{
+            display: flex; 
+            padding-bottom: 15px;
+            margin-bottom: 10px;
+        }
+    }
+}
