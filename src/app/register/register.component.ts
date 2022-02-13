@@ -45,6 +45,7 @@ export class RegisterComponent implements OnInit {
       name: "tris dep zai"
     },
   ]
+  
   hashAll() {
     this.myHash[this.database[0].id] = 0;
     this.myHash[this.database[1].id] = 1;
