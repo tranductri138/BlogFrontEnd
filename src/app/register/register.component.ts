@@ -56,7 +56,6 @@ export class RegisterComponent implements OnInit {
     this.myHash[this.database[6].id] = 6;
     // this.myHash["abd"] = 2;
     // this.myHash["ab1"] = 3;
-    // this.myHash["abs"] = 4; 
     // this.myHash["abb"] = 5;
     // this.myHash["ab5"] = 6; 
     // this.myHash["ab6"] = 7;
