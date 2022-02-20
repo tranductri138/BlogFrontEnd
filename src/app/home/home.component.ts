@@ -41,8 +41,10 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     // this.createObj()
-    let a = Tri.name
-    console.log(a);
+    let id = "asdasd"
+    const a:any = {}
+    a['as'] = id
+    console.log( typeof(a));
   }
   ar1() {
     const numberArray1: number[] = [7, 21, 47, 85, 1, 4, 35, 10, 3, 2, 6, 14, 8, 5, 16, 0]
